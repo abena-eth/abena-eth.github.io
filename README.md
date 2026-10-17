@@ -1,6 +1,6 @@
 # abenasplaining
 
-A buildless static link page for Abena Asante. Style based on the supplied Canva deck: lavender, black sans-serif typography, generous spacing and understated candlestick graphics. Original link destinations and portrait taken from https://linktr.ee/abenasplaining on 15 October 2026.
+A buildless static link page for Abena. Style based on the supplied Canva deck: lavender, black sans-serif typography, generous spacing and understated candlestick graphics. Original link destinations and portrait taken from https://linktr.ee/abenasplaining on 15 October 2026.
 
 ## Edit
 
