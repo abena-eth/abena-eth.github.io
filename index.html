@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#e6d7ed">
 <meta name="description" content="Crypto, AI & money — simply explained. Find Abena on Instagram, TikTok, YouTube, Substack and more.">
 <meta property="og:title" content="abenasplaining | Abena">
@@ -26,6 +26,9 @@ main{display:block}.profile-header{margin-bottom:40px}.links-panel{display:grid;
 /* Keep social shortcuts on one row; give them the full header width on phones. */
 .social-icons{flex-wrap:nowrap}.social-icons a{flex:0 0 44px}
 @media(max-width:760px){.profile-header{display:grid;grid-template-columns:68px minmax(0,1fr);column-gap:15px;row-gap:10px;align-items:start}.profile-photo{grid-column:1;grid-row:1/3}.profile-details{display:contents}.profile-name{grid-column:2;grid-row:1;margin:0}.profile-slogan{grid-column:2;grid-row:2;margin:0}.social-icons{grid-column:1/-1;grid-row:3;margin:0;gap:0;justify-content:space-between}.social-icons a{flex:0 1 44px;min-width:0;height:44px}.social-icons .icon{width:24px;height:24px}.social-icons svg{width:24px;height:24px}}
+
+/* Mobile social navigation stays within thumb reach above the safe area. */
+@media(max-width:760px){body{padding-bottom:calc(80px + env(safe-area-inset-bottom,0px))}.social-icons{position:fixed;bottom:0;left:0;right:0;z-index:20;width:100%;margin:0;padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));background:#f8f3fa;border-top:1px solid var(--line);box-shadow:0 -4px 20px #1714190a;justify-content:space-evenly}.social-icons a{height:48px;flex:0 1 44px}.social-icons a:hover{background:var(--lavender)}html{scroll-padding-bottom:calc(90px + env(safe-area-inset-bottom,0px))}}
 </style>
 </head>
 <body>
