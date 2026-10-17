@@ -20,6 +20,8 @@ main{row-gap:40px}
 .profile-details{min-width:0;flex:1}.profile-name{font-size:27px;font-weight:700;letter-spacing:-.6px;margin:4px 0 8px}.profile-slogan{font-size:18px;line-height:1.5;color:var(--muted);margin:0 0 12px}
 .social-icons{display:flex;flex-wrap:wrap;gap:5px}.social-icons a{display:grid;place-items:center;width:44px;height:44px;border-radius:50%}.social-icons a:hover{background:#f8f3fa}.social-icons .icon{width:28px;height:28px}.social-icons svg{width:27px;height:27px}
 @media(max-width:760px){.profile-header{gap:15px;padding-bottom:24px}.profile-photo{width:68px;height:68px}.profile-name{font-size:22px;margin-top:0}.profile-slogan{font-size:15px}.social-icons{margin-left:-7px;gap:0}.social-icons a{width:44px;height:44px}main{row-gap:30px}}
+
+main{display:block}.profile-header{margin-bottom:24px}.page-tabs{display:flex;gap:24px;border-bottom:1px solid var(--line);margin-bottom:40px}.page-tabs button{position:relative;border:0;background:none;color:var(--muted);font:600 20px Arial,Helvetica,sans-serif;padding:16px 20px 20px;cursor:pointer;min-height:48px}.page-tabs button[aria-selected="true"]{color:var(--ink)}.page-tabs button[aria-selected="true"]:after{content:"";position:absolute;bottom:-1px;height:4px;border-radius:4px 4px 0 0;background:var(--ink);left:0;right:0}.page-tabs button:focus-visible{outline:2px solid var(--ink);outline-offset:-6px;border-radius:12px}.links-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:90px;align-items:center}.shop-panel{text-align:center;padding:55px 24px 80px;min-height:380px}.shop-icon{width:50px;height:50px;margin-bottom:16px}.shop-label{font-size:11px;letter-spacing:2px;color:var(--muted)}.shop-panel h2{font-size:30px;font-weight:400;letter-spacing:-.8px;margin:16px 0}.shop-panel p:last-child{font-size:15px;line-height:1.6;color:var(--muted)}[hidden]{display:none!important}@media(max-width:760px){.links-panel{grid-template-columns:minmax(0,1fr);gap:33px}.page-tabs{margin-bottom:30px;gap:15px}.page-tabs button{font-size:18px}.shop-panel{padding:35px 8px 60px}.shop-panel h2{font-size:26px}}
 </style>
 </head>
 <body>
@@ -29,6 +31,11 @@ main{row-gap:40px}
 <div class="profile-details"><p class="profile-name">abenasplaining</p><p class="profile-slogan">Digital Money, AI &amp; Tech, simply explained.</p>
 <nav class="social-icons" aria-label="Social shortcuts"><a href="https://www.linkedin.com/in/abena-eth/" aria-label="LinkedIn" title="LinkedIn"><span class="icon" aria-hidden="true" style="font-weight:bold;font-size:20px">in</span></a><a href="https://www.instagram.com/abena.eth" aria-label="Instagram" title="Instagram"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></svg></span></a><a href="https://x.com/abena_eth" aria-label="X" title="X"><span class="icon" aria-hidden="true">𝕏</span></a><a href="mailto:abenasplaining@gmail.com" aria-label="Email" title="Email"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m3 6 9 7 9-7"/></svg></span></a><a href="https://www.tiktok.com/@abenasplaining" aria-label="TikTok" title="TikTok"><span class="icon" aria-hidden="true" style="font-size:27px">♪</span></a><a href="https://www.youtube.com/@abenasplaining" aria-label="YouTube" title="YouTube"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z" fill="currentColor" stroke="none"/></svg></span></a><a href="https://substack.com/@abenaasantewaa" aria-label="Substack" title="Substack"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16M4 7h16M4 11h16v11l-8-5-8 5z"/></svg></span></a><a href="https://t.me/abena_eth" aria-label="Telegram" title="Telegram"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 18-7-4 18-6-6-4 3 1-6zM8 12l9-6-6 9" stroke-linejoin="round"/></svg></span></a><a href="https://luma.com/user/abena_eth" aria-label="Luma" title="Luma"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 2v6m10-6v6M3 11h18"/></svg></span></a></nav></div>
 </header>
+<div class="page-tabs" role="tablist" aria-label="Explore Abena" hidden>
+<button type="button" id="links-tab" role="tab" aria-selected="true" aria-controls="links-panel">Links</button>
+<button type="button" id="shop-tab" role="tab" aria-selected="false" aria-controls="shop-panel" tabindex="-1">Shop</button>
+</div>
+<div id="links-panel" class="links-panel" role="tabpanel" aria-labelledby="links-tab" tabindex="0">
 
 <section class="intro" aria-label="About Abena">
 <h1><span>DIGITAL MONEY,</span> <span>AI &amp; TECH,</span><span class="last">simply explained.</span></h1>
@@ -50,7 +57,43 @@ main{row-gap:40px}
 <a class="card" href="https://luma.com/user/abena_eth"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 2v6m10-6v6M3 11h18"/></svg></span><span class="copy"><strong>Luma</strong><small>Find me on Luma.</small></span><span class="arrow" aria-hidden="true">↗</span></a>
 </div>
 </nav>
+</div>
+<section id="shop-panel" class="shop-panel" role="tabpanel" aria-labelledby="shop-tab" tabindex="0" hidden>
+<svg class="shop-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 16h28l3 27H7z"/><path d="M17 18V11a7 7 0 0 1 14 0v7"/></svg>
+<p class="shop-label">SHOPMY</p>
+<h2>My shop is coming soon.</h2>
+<p>A space for my picks. Check back here when it’s ready.</p>
+</section>
 </main>
 <footer><span>© 2026 Abena</span><span>A little less hype. A little more clarity.</span></footer>
+<script>
+(() => {
+  const tablist = document.querySelector('.page-tabs');
+  const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
+  function selectTab(tab) {
+    tabs.forEach(item => {
+      const active = item === tab;
+      item.setAttribute('aria-selected', String(active));
+      item.tabIndex = active ? 0 : -1;
+      document.getElementById(item.getAttribute('aria-controls')).hidden = !active;
+    });
+  }
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => selectTab(tab));
+    tab.addEventListener('keydown', event => {
+      let next;
+      if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+      else if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
+      else if (event.key === 'Home') next = 0;
+      else if (event.key === 'End') next = tabs.length - 1;
+      else return;
+      event.preventDefault();
+      selectTab(tabs[next]);
+      tabs[next].focus();
+    });
+  });
+  tablist.hidden = false;
+})();
+</script>
 </body>
 </html>

@@ -4,7 +4,7 @@ A buildless static link page for Abena. Style based on the supplied Canva deck: 
 
 ## Edit
 
-Edit index.html. Colours are CSS variables near the top. All eight destinations are ordinary HTML links. No JavaScript, tracking, framework, remote fonts, or build step is required.
+Edit index.html. Colours are CSS variables near the top. All eight destinations are ordinary HTML links. A small inline script switches the accessible Links and Shop tabs. No tracking, framework, remote fonts, or build step is required. The Shop tab shows a coming-soon message until the ShopMy URL is available.
 
 ## GitHub Pages
 
